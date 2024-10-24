@@ -1,0 +1,74 @@
+version: 2
+
+models:
+  - name: view_vendas_completa
+    columns:
+      - name: DT_VENDA
+        description: Data da venda
+        tests:
+          - not_null
+      - name: ID_VENDA
+        description: Identificador único da venda
+        tests:
+          - unique
+          - not_null
+      - name: ID_LOJA
+        description: Identificador único da loja
+        tests:
+          - not_null
+      - name: ID_PRODUTO
+        description: Identificador único do produto
+        tests:
+          - not_null
+      - name: ID_CLIENTE
+        description: Identificador único do cliente
+        tests:
+          - not_null
+      - name: NM_LOJA
+        description: Nome da loja
+        tests:
+          - not_null
+      - name: NM_CIDADE_LOJA
+        description: Cidade onde a loja está localizada
+        tests:
+          - not_null
+      - name: NM_ESTADO
+        description: Estado onde a loja está localizada
+        tests:
+          - not_null
+      - name: NM_PRODUTO
+        description: Nome do produto
+        tests:
+          - not_null
+      - name: NM_CATEGORIA
+        description: Categoria do produto
+        tests:
+          - not_null
+      - name: NM_CLIENTE
+        description: Nome do cliente
+        tests:
+          - not_null
+      - name: IDADE
+        description: Idade do cliente
+        tests:
+          - not_null
+      - name: SEXO
+        description: Sexo do cliente
+        tests:
+          - not_null
+      - name: NM_CIDADE_CLIENTE
+        description: Cidade do cliente
+        tests:
+          - not_null
+      - name: QT_VENDIDA
+        description: Quantidade vendida
+        tests:
+          - not_null
+      - name: VL_TOTAL_VENDA
+        description: Valor total da venda
+        tests:
+          - not_null
+      - name: VL_PRECO_UNITARIO
+        description: Preço unitário do produto
+        tests:
+          - not_null

@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: view_vendas_por_categoria
+    columns:
+      - name: NM_CATEGORIA
+        description: Categoria do produto
+        tests:
+          - not_null
+      - name: VL_TOTAL_VENDA
+        description: Valor total da venda somando todos os itens
+        tests:
+          - not_null
+      - name: QT_VENDIDA
+        description: Quantidade de itens na venda
+        tests:
+          - not_null
+          

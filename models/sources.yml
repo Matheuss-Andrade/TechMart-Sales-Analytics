@@ -1,0 +1,105 @@
+version: 2
+
+sources:
+  - name: raw_techmart
+    description: Banco de dados raw contendo as tabelas com os dados brutos
+    tables:
+      - name: vendas
+        description: Tabela de vendas da empresa TechMart
+        columns:
+          - name: ID_VENDA
+            description: Chave primária da tabela contendo o identificador único da venda
+            tests:
+              - unique            
+              - not_null
+          - name: ID_LOJA
+            description: Identificador único de cada loja
+            tests:
+              - not_null
+          - name: ID_PRODUTO
+            description: Identificador único de cada produto
+            tests:
+              - not_null
+          - name: ID_CLIENTE
+            description: Identificador único de cada cliente
+            tests:
+              - not_null
+          - name: DATA_VENDA
+            description: Data em que a venda foi realizada
+            tests:
+              - not_null
+          - name: QUANTIDADE
+            description: Quantidade de itens da venda
+            tests:
+              - not_null
+          - name: VALOR_VENDA
+            description: Valor total da venda
+            tests:
+              - not_null
+
+      - name: lojas
+        description: Tabela de lojas da empresa TechMart
+        columns:
+          - name: ID_LOJA
+            description: Chave primária da tabela de lojas
+            tests:
+              - unique
+              - not_null
+          - name: NOME_LOJA
+            description: Nome de cada uma das lojas
+            tests:
+              - not_null
+          - name: CIDADE
+            description: Cidade em que a loja está localizada
+            tests:
+              - not_null
+          - name: ESTADO
+            description: Estado em que a loja está localizada
+            tests:
+              - not_null
+
+      - name: produtos
+        description: Tabela de cadastro de produtos da empresa TechMart
+        columns:
+          - name: ID_PRODUTO
+            description: Chave primária da tabela de produtos
+            tests:
+              - unique
+              - not_null
+          - name: NOME_PRODUTO
+            description: Nome do produto no cadastro
+            tests:
+              - not_null
+          - name: CATEGORIA
+            description: Categoria em que esse produto está inserido
+            tests:
+              - not_null
+          - name: PRECO_UNITARIO
+            description: Preço por cada unidade do produto
+            tests:
+              - not_null
+
+      - name: clientes
+        description: Tabela de cadastro de clientes da empresa TechMarth
+        columns:
+          - name: ID_CLIENTE
+            description: Chave primária da tabela de clientes
+            tests:
+              - unique
+              - not_null
+          - name: NOME_CLIENTE
+            description: Nome do cliente no cadastro
+            tests:
+              - not_null
+          - name: IDADE
+            description: Idade do cliente
+            tests:
+              - not_null
+          - name: SEXO
+            description: Sexo do cliente
+            tests:
+              - not_null
+          - name: CIDADE
+            description: Cidade em que o cliente mora
+            tests:
+              - not_null

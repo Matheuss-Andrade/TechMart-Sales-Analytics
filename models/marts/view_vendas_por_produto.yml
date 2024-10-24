@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: view_vendas_por_produto
+    columns:
+      - name: ID_PRODUTO
+        description: Identificador único do produto na TechMart
+        tests:
+          - not_null
+      - name: NM_PRODUTO
+        description: Nome do produto no cadastro da TechMart
+        tests:
+          - not_null
+      - name: NM_CATEGORIA
+        description: Categoria do produto
+        tests:
+          - not_null
+      - name: VL_TOTAL_VENDA
+        description: Valor total da venda somando todos os itens
+        tests:
+          - not_null
+      - name: QT_VENDIDA
+        description: Quantidade de itens na venda
+        tests:
+          - not_null
+          

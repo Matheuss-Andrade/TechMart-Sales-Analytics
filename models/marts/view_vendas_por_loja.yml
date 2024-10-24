@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: view_vendas_por_loja
+    columns:
+      - name: ID_LOJA
+        description: Identificador único da loja na TechMart
+        tests:
+          - not_null
+      - name: NM_LOJA
+        description: Nome da loja da TechMart
+        tests:
+          - not_null
+      - name: NM_CIDADE
+        description: Cidade em que a loja está localizada
+        tests:
+          - not_null
+      - name: VL_TOTAL_VENDA
+        description: Valor total da venda somando todos os itens
+        tests:
+          - not_null
+      - name: QT_VENDIDA
+        description: Quantidade de itens na venda
+        tests:
+          - not_null
+          

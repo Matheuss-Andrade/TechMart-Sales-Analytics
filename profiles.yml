@@ -1,0 +1,14 @@
+# Configurando a conexão no bando de dados da cloud escolhida
+project_techmart: # nome do projeto
+   target: dev # ambiente
+   outputs:
+      dev:
+         type: bigquery # cloud utilizada
+         method: service-account # tipo de conexão, nesse caso é usuário de serviço
+         project: project-elt-techmart # nome do projeto do BigQuery
+         dataset: dw_techmart # nome do banco de dados (caso não exista, será criado)
+         keyfile: D:\dbt\project_02\credencial_bigquery\project-elt-techmart-b6fa948cee80.json # caminho do json gerado pelo BigQuery com as credenciais de acesso
+         threads: 1
+         timeout_seconds: 300
+         location: southamerica-east1
+         priority: interactive
